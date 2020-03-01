@@ -6,6 +6,9 @@ services:
     - "5000:5000"
     volumes:
     - .:/app
+    environment:
+        - FLASK_ENV=development
+        - FLASK_RUN_EXTRA_FILES=templates/*
     links:
     - mongodb
   mongodb:

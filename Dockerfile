@@ -9,4 +9,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["env", "FLASK_APP=api.py", "flask", "run"]
+EXPOSE 5000
+
+CMD ["env", "FLASK_APP=api.py", "flask", "run", "--host", "0.0.0.0"]
