@@ -1,10 +1,23 @@
 // Custom divider with icon
 .divider-custom {
-  margin: 1.25rem 0 1.5rem;
+  margin: .5rem 0 .5rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  .divider-custom-long-line {
+    width: 100%;
+    max-width: 10rem;
+    height: 0.17rem;
+    background-color: $white;
+    border-color: $white !important;
+    &:first-child {
+      margin-right: 1rem;
+    }
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
   .divider-custom-line {
     width: 100%;
     max-width: 7rem;
