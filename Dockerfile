@@ -11,4 +11,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["env", "FLASK_APP=api.py", "flask", "run", "--host", "0.0.0.0"]
+CMD ["env", "FLASK_APP=api", "flask", "run", "--host", "0.0.0.0"]
