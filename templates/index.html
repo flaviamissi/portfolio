@@ -88,7 +88,7 @@
         </div>
     </header>
 
-    {% include '_includes/about_me.html' %}
+    {% include '_includes/about_me.html' with context %}
     {% include '_includes/interests.html' %}
     {% include '_includes/contact_form.html' %}
 
@@ -98,7 +98,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; {{ site.name }} 20{{ site.time }}
+                        Copyright &copy; {{ site.name }} 2020
                     </div>
                 </div>
             </div>
@@ -125,6 +125,10 @@
      <!-- Contact Form JavaScript -->
      <script src="{{ url_for('static', filename='/js/jqBootstrapValidation.js') }}"></script>
      <script src="{{ url_for('static', filename='/js/contact_me_static.js') }}"></script>
+
+     <script src="{{ url_for('static', filename='/js/about_me.js') }}"></script>
+
+     <script src="{{ url_for('static', filename='/js/projects.js') }}"></script>
 
      <!-- Custom Theme JavaScript -->
      <script src="{{ url_for('static', filename='/js/freelancer.js') }}"></script>
