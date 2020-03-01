@@ -1,11 +1,14 @@
 from flask import Flask
 
 from api.single_page import single_page
+from api.api import api
 
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True,
-                static_folder='../static')
+                static_folder='../static',
+                template_folder='../templates')
+
     # app.config.from_mapping(
     #     SECRET_KEY='dev',
     #     DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
@@ -25,5 +28,6 @@ def create_app(test_config=None):
     #     pass
 
     app.register_blueprint(single_page)
+    app.register_blueprint(api)
 
     return app
